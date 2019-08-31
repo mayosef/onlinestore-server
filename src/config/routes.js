@@ -13,10 +13,15 @@ apiRouter.get('/user/me', authorization , users.me)
 
 apiRouter.post('/user/login', users.login)
 apiRouter.get('/product', products.getAll);
-apiRouter.put('/product', products.createProduct)
+apiRouter.put('/product', products.createProduct);
+
+apiRouter.get('/product/:id', products.getById);
 
 
 apiRouter.get('/category', categories.getAll);
 apiRouter.put('/category', categories.createCategory)
+apiRouter.get('/category/:id/product', categories.products)
+
+
 
 module.exports = apiRouter;

@@ -10,10 +10,21 @@ const mongoose = require('mongoose');
         type:Number,
         required:true
      },
+     thumbnailUrl: {
+         type:String,
+     },
      categoryId: {
          type:mongoose.Schema.Types.ObjectId,
          required:true
      }
+ }, {
+    toJSON: {
+        transform: (doc, ret) => {
+        ret.id = ret._id
+        delete ret._id
+        return ret
+        }
+    }
  })
 
 
