@@ -13,9 +13,16 @@ const mongoose = require('mongoose');
      thumbnailUrl: {
          type:String,
      },
+     description: {
+        type:String,
+        maxlength:400
+     },
      categoryId: {
          type:mongoose.Schema.Types.ObjectId,
          required:true
+     },
+     image: {
+         type:String,
      }
  }, {
     toJSON: {

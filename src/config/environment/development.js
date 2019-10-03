@@ -1,3 +1,8 @@
 module.exports = {
-    secret:'wrhtdfgdfh0rw78f'
+    port:4000,
+    secret:'wrhtdfgdfh0rw78f',
+    db: {
+        name:'onlinestore',
+        address:'localhost'
+    }
 }

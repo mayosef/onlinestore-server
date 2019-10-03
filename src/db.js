@@ -1,5 +1,7 @@
+const config = require('./config/environment/index.js');
+
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/onlinestore', {useNewUrlParser: true});
+mongoose.connect(`mongodb://${config.db.address}/${config.db.name}`, {useNewUrlParser: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

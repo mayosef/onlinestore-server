@@ -21,6 +21,9 @@ const UserSchema = new mongoose.Schema ({
     },
     age: {
         type:Number
+    },
+    isAdmin: {
+        type:Boolean
     }
 })
 

@@ -4,10 +4,10 @@ const morgan = require('morgan');
 const apiRouter = require('./config/routes');
 const cors = require('cors');
 const app = express();
-const port = 4000;
+const config = require('./config/environment');
 
 
-
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('combined'));
@@ -19,7 +19,9 @@ app.use('/api', apiRouter);
 
 
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
+app.listen(config.port, () => {
+    console.log(`Example app listening on port ${config.port}!`)
     require('./db')
 });
+
+module.exports = app;
