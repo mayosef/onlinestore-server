@@ -7,6 +7,9 @@
     "start": "nodemon src/server.js",
     "test": "cross-env NODE_ENV=test mocha --timeout 10000"
   },
+  "engines": {
+    "node": "10.16.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mayosef/onlinestore-server.git"
